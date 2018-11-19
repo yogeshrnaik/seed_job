@@ -24,6 +24,5 @@ node {
 					"""}
 
 	def final_dsl = folders_dsls.join("\n") + "\n" + jobs_dsls.join("\n")
-
-	jobDsl scriptText: $final_dsl
+	jobDsl removedConfigFilesAction: 'DELETE', removedJobAction: 'DELETE', removedViewAction: 'DELETE', sandbox: true, scriptText: "$final_dsl"
 }
