@@ -1,9 +1,7 @@
 folders:
-  - folder_path: "root_folder"
-    description: "root_folder_description"
-  - folder_path: "root_folder/sub_folder"
-    description: "sub_folder_description"
+  - folder_path: "odin"
+    description: "everything around service odin"
 jobs:
-  - job_path: "root_folder/root_folder_job"
-    jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/seed_job.git"
-    jenkinsfile_path: "sample_jenkins_file"
+  - job_path: "odin/build_job"
+    jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/odin.git"
+    jenkinsfile_path: "Jenkinsfile"
