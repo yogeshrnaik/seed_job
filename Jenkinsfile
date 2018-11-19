@@ -8,7 +8,7 @@ node {
 							description('${it.description}')
 						}
 					"""}
-	echo("$folders_dsls")
+
 	def jobs = config.jobs
 	def jobs_dsls = jobs.collect { """
 						pipelineJob('${it.job_path}') {
@@ -22,5 +22,8 @@ node {
     						}
 						}
 					"""}
-	echo("$jobs_dsls")
+
+	def final_dsl = folders_dsls.join("\n") + "\n" + jobs_dsls.join("\n")
+
+	jobDsl scriptText: $final_dsl
 }
