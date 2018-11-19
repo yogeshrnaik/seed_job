@@ -1,7 +1,7 @@
 folders:
-  - folder-path: "root_folder"
+  - folder_path: "root_folder"
     description: "root_folder_description"
-  - folder-path: "root_folder/sub_folder"
+  - folder_path: "root_folder/sub_folder"
     description: "sub_folder_description"
 jobs:
   - job_path: "root_folder/root_folder_job"

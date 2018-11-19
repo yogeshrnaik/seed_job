@@ -4,7 +4,7 @@ node {
 
 	def folders = config.folders
 	def folders_dsls = folders.collect { """
-						folder('${it.folder-path}') {
+						folder('${it.folder_path}') {
 							description('${it.description}')
 						}
 					"""}
