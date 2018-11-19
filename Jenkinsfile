@@ -12,6 +12,9 @@ node {
 	def jobs = config.jobs
 	def jobs_dsls = jobs.collect { """
 						pipelineJob('${it.job_path}') {
+						    triggers {
+                                githubPush()
+                            }
     						definition {
         						cpsScm {
             						scm {
