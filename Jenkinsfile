@@ -1,6 +1,6 @@
 node {
     checkout scm
-	def job_config = readYaml(file: "jenkins_job_config.yaml")
+	def config = readYaml(file: "jenkins_job_config.yaml")
 
 	def folders = config.folders
 	def folders_dsls = folders.collect { """
