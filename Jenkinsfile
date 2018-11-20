@@ -18,9 +18,9 @@ node {
     						definition {
         						cpsScm {
             						scm {
-                						git('${it.jenkinsfile_git_repo}')
-                						scriptPath('${it.jenkinsfile_path}')
+                						git('${it.jenkinsfile_git_repo}', "master")
             						}
+            						scriptPath('${it.jenkinsfile_path}')
         						}
     						}
 						}
