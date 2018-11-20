@@ -3,6 +3,8 @@ folders:
     description: "everything around service odin"
   - folder_path: "bifrost"
     description: "platform jobs to provision clusters and mapped services"
+  - folder_path: "asgard-infra"
+    description: "jobs to hold infrastructure pipelines"
 jobs:
   - job_path: "odin/build_job"
     jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/odin.git"
