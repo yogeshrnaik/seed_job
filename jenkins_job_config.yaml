@@ -36,3 +36,7 @@ jobs:
     jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/thor-infrastructure.git"
     jenkinsfile_path: "Jenkinsfile"
     auto_trigger: true
+  - job_path: "draining-lambda"
+    jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/draining-lambda.git"
+    jenkinsfile_path: "Jenkinsfile"
+    auto_trigger: true
