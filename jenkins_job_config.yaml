@@ -10,7 +10,7 @@ jobs:
     jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/odin.git"
     jenkinsfile_path: "Jenkinsfile"
   - job_path: "bifrost/provision_cluster_job"
-    jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/bifrost.git"
+    jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/bifrost-mapping.git"
     jenkinsfile_path: "Jenkinsfile"
   - job_path: "asgard-infra/cluster"
     jenkinsfile_git_repo: "git@github.com:ecsworkshop2018/asgard-infrastructure.git"
