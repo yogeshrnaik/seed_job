@@ -12,9 +12,7 @@ node {
 	def jobs = config.jobs
 	def jobs_dsls = jobs.collect { """
 						pipelineJob('${it.job_path}') {
-						    triggers {
-                                githubPush()
-                            }
+						    ${optionallyTriggerWithGithubHook(it.auto_trigger)}
     						definition {
         						cpsScm {
             						scm {
@@ -28,4 +26,17 @@ node {
 
 	def final_dsl = folders_dsls.join("\n") + "\n" + jobs_dsls.join("\n")
 	jobDsl removedConfigFilesAction: 'DELETE', removedJobAction: 'DELETE', removedViewAction: 'DELETE', sandbox: true, scriptText: "$final_dsl"
+}
+
+def optionallyTriggerWithGithubHook(boolean trigger_required) {
+	if(trigger_required) {
+		"""
+		triggers {
+        	githubPush()
+        }
+		"""
+	}
+	else {
+		""
+	}
 }

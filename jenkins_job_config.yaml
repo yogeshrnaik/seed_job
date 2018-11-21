@@ -9,12 +9,16 @@ jobs:
   - job_path: "odin/build_job"
     jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/odin.git"
     jenkinsfile_path: "Jenkinsfile"
+    auto_trigger: true
   - job_path: "bifrost/provision_cluster_job"
     jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/bifrost-mapping.git"
     jenkinsfile_path: "Jenkinsfile"
+    auto_trigger: true
   - job_path: "asgard-infra/cluster"
     jenkinsfile_git_repo: "git@github.com:ecsworkshop2018/asgard-infrastructure.git"
     jenkinsfile_path: "Jenkinsfile"
+    auto_trigger: false
   - job_path: "asgard-infra/asg"
     jenkinsfile_git_repo: "git@github.com:ecsworkshop2018/asgard-infrastructure.git"
     jenkinsfile_path: "exercise3-solution/app-dns-and-alb/alb_dns_pipeline"
+    auto_trigger: false
