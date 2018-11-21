@@ -5,6 +5,8 @@ folders:
     description: "platform jobs to provision clusters and mapped services"
   - folder_path: "asgard-infra"
     description: "jobs to hold infrastructure pipelines"
+  - folder_path: "thor"
+    description: "everything around service thor"
 jobs:
   - job_path: "odin/build_job"
     jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/odin.git"
@@ -24,5 +26,9 @@ jobs:
     auto_trigger: false
   - job_path: "odin/deploy"
     jenkinsfile_git_repo: "git@github.com:ecsworkshop2018/odin-infrastructure.git"
+    jenkinsfile_path: "Jenkinsfile"
+    auto_trigger: true
+  - job_path: "thor/build_job"
+    jenkinsfile_git_repo: "git@github.com:ecsworkshop2018/thor.git"
     jenkinsfile_path: "Jenkinsfile"
     auto_trigger: true
