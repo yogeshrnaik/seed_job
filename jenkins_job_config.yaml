@@ -32,3 +32,7 @@ jobs:
     jenkinsfile_git_repo: "git@github.com:ecsworkshop2018/thor.git"
     jenkinsfile_path: "Jenkinsfile"
     auto_trigger: true
+  - job_path: "thor/deploy"
+    jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/thor-infrastructure.git"
+    jenkinsfile_path: "Jenkinsfile"
+    auto_trigger: true
