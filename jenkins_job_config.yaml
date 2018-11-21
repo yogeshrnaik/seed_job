@@ -15,3 +15,6 @@ jobs:
   - job_path: "asgard-infra/cluster"
     jenkinsfile_git_repo: "git@github.com:ecsworkshop2018/asgard-infrastructure.git"
     jenkinsfile_path: "Jenkinsfile"
+  - job_path: "asgard-infra/asg"
+    jenkinsfile_git_repo: "git@github.com:ecsworkshop2018/asgard-infrastructure.git"
+    jenkinsfile_path: "exercise3-solution/app-dns-and-alb/alb_dns_pipeline"
