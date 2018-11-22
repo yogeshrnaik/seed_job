@@ -40,3 +40,7 @@ jobs:
     jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/draining-lambda.git"
     jenkinsfile_path: "dev/Jenkinsfile"
     auto_trigger: true
+  - job_path: "scaling-lambda"
+    jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/scaling-lambda.git"
+    jenkinsfile_path: "dev/Jenkinsfile"
+    auto_trigger: true
