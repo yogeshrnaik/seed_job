@@ -7,13 +7,11 @@ folders:
     description: "jobs to hold infrastructure pipelines"
   - folder_path: "thor"
     description: "everything around service thor"
+  - folder_path: "lambdas"
+    description: "common lambda functions for ecs services and clusters"
 jobs:
   - job_path: "odin/build_job"
     jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/odin.git"
-    jenkinsfile_path: "Jenkinsfile"
-    auto_trigger: true
-  - job_path: "bifrost/provision_cluster_job"
-    jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/bifrost-mapping.git"
     jenkinsfile_path: "Jenkinsfile"
     auto_trigger: true
   - job_path: "asgard-infra/cluster"
@@ -36,11 +34,19 @@ jobs:
     jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/thor-infrastructure.git"
     jenkinsfile_path: "Jenkinsfile"
     auto_trigger: true
-  - job_path: "draining-lambda"
+  - job_path: "bifrost/provision_cluster_job"
+    jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/bifrost-mapping.git"
+    jenkinsfile_path: "Jenkinsfile"
+    auto_trigger: true
+  - job_path: "lambdas/dev-draining-lambda"
     jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/draining-lambda.git"
     jenkinsfile_path: "dev/Jenkinsfile"
     auto_trigger: true
-  - job_path: "scaling-lambda"
+  - job_path: "lambdas/prod-draining-lambda"
+    jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/draining-lambda.git"
+    jenkinsfile_path: "prod/Jenkinsfile"
+    auto_trigger: true
+  - job_path: "lambdas/scaling-lambda"
     jenkinsfile_git_repo: "https://github.com/ecsworkshop2018/scaling-lambda.git"
     jenkinsfile_path: "dev/Jenkinsfile"
     auto_trigger: true
