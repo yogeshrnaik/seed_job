@@ -1,0 +1,14 @@
+folders:
+  - folder_path: "sample1"
+    description: "sample1 description"
+  - folder_path: "sample2"
+    description: "sample2 description"
+jobs:
+  - job_path: "sample1/sample1_job"
+    jenkinsfile_git_repo: "https://github.com/{your_user}/sample1.git"
+    jenkinsfile_path: "path/to/Jenkinsfile"
+    auto_trigger: true
+  - job_path: "sample2/sample2_job"
+    jenkinsfile_git_repo: "https://github.com/{your_user}/sample2.git"
+    jenkinsfile_path: "path/to/Jenkinsfile"
+    auto_trigger: false
