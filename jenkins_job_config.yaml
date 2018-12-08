@@ -12,3 +12,7 @@ jobs:
     jenkinsfile_git_repo: "https://github.com/yogeshrnaik/asgard-infrastructure.git"
     jenkinsfile_path: "Jenkinsfile"
     auto_trigger: true
+  - job_path: "asgard/alb-and-dns"
+    jenkinsfile_git_repo: "https://github.com/yogeshrnaik/asgard-infrastructure.git"
+    jenkinsfile_path: "exercise3/app-dns-and-alb/alb_dns_pipeline"
+    auto_trigger: true
