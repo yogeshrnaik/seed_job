@@ -3,6 +3,8 @@ folders:
     description: "odin service jobs"
   - folder_path: "asgard"
     description: "asgard cluster provisioning jobs"
+  - folder_path: "bifrost"
+    description: "bifrost platform jobs"
 jobs:
   - job_path: "odin/build_job"
     jenkinsfile_git_repo: "https://github.com/yogeshrnaik/odin.git"
@@ -15,4 +17,12 @@ jobs:
   - job_path: "asgard/alb-and-dns"
     jenkinsfile_git_repo: "https://github.com/yogeshrnaik/asgard-infrastructure.git"
     jenkinsfile_path: "exercise3/app-dns-and-alb/alb_dns_pipeline"
+    auto_trigger: true
+  - job_path: "bifrost/alb"
+    jenkinsfile_git_repo: "https://github.com/yogeshrnaik/bifrost-mapping.git"
+    jenkinsfile_path: "alb-and-dns/Jenkinsfile"
+    auto_trigger: true
+  - job_path: "bifrost/cluster-and-service"
+    jenkinsfile_git_repo: "https://github.com/yogeshrnaik/bifrost-mapping.git"
+    jenkinsfile_path: "Jenkinsfile"
     auto_trigger: true
