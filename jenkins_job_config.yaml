@@ -8,7 +8,7 @@ jobs:
     jenkinsfile_git_repo: "https://github.com/yogeshrnaik/odin.git"
     jenkinsfile_path: "Jenkinsfile"
     auto_trigger: true
-  - job_path: "asgard/build_job"
+  - job_path: "asgard/cluster"
     jenkinsfile_git_repo: "https://github.com/yogeshrnaik/asgard-infrastructure.git"
     jenkinsfile_path: "Jenkinsfile"
     auto_trigger: true
