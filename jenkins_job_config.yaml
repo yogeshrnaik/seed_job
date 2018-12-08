@@ -1,8 +1,14 @@
 folders:
   - folder_path: "odin"
     description: "odin service jobs"
+  - folder_path: "asgard"
+    description: "asgard cluster provisioning jobs"
 jobs:
   - job_path: "odin/build_job"
     jenkinsfile_git_repo: "https://github.com/yogeshrnaik/odin.git"
+    jenkinsfile_path: "Jenkinsfile"
+    auto_trigger: true
+  - job_path: "asgard/build_job"
+    jenkinsfile_git_repo: "https://github.com/yogeshrnaik/asgard-infrastructure.git"
     jenkinsfile_path: "Jenkinsfile"
     auto_trigger: true
